@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/item_selected"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:weightSum="3">
 
     <ImageView
         android:layout_margin="10dp"
@@ -12,16 +13,66 @@
         android:id="@+id/check_box"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:src="@drawable/ic_movie_dark"
         android:gravity="center"
         android:onClick="setState"
         android:scaleType="centerCrop"
         />
 
+    <LinearLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Harry Potter"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:id="@+id/movie_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="2004"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_margin="5dp"
+                android:layout_gravity="left"
+                android:id="@+id/movie_year"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                />
+
+            <TextView
+                android:text="Fantasy"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_margin="5dp"
+                android:layout_gravity="left"
+                android:id="@+id/movie_genre"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
     <TextView
+        android:layout_weight="1"
+        android:text="112 min"
+        android:textColor="@android:color/holo_orange_dark"
         android:layout_margin="5dp"
-        android:layout_gravity="center"
-        android:id="@+id/movie_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_gravity="bottom"
+        android:id="@+id/movie_time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
